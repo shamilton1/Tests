@@ -59,26 +59,69 @@ This step will show you how to:
 
 The example used in this guide is complete and no further develoment is required,
 
-## Running On-premise
+You can run the exact same steps and command on-premise as on an AWS EC2 instance. 
 
+## Starting the GUI
+This step shows how to invoke the GUI. 
+To run the SDAccel GUI do...
 
-Following on from the commands issued in the previous step, execute the following commands in your local shell.
+The following tsteps show how run from the command line...
+
+## Running SW Emulation
+
+The main goal of SW emulation is to ensure functional correctness and to partition the application into kernel(s) vs host. For CPU-based (SW) emulation, both the host code and the kernel(s) code are compiled to run on an x86 processor. The SW Emulation enables developer to iterate and refine the algorithms through fast compile, and iteration time is similar to software compile and run cycle on CPU.
+
+The instructions below describe how to get started on SDAccel development using the SW Emulation:
 
 ```
-    $ cd sdk/SDAccel/examples/xilinx/getting_started/rtl_kernel/rtl_vadd
-    $ make all TARGETS=hw DEVICES=$AWS_PLATFORM
+    $ cd sdk/SDAccel/examples/xilinx/getting_started/host/helloworld_ocl/
+    $ make clean
+    $ make TARGETS=sw_emu DEVICES=$AWS_PLATFORM all
 ```
 
-The build process will generate the Host and Kernel executables. 
+
+## Running HW Emulation
+
+The SDAccel hardware emulation flow enables the developer to check the correctness of the logic generated for the custom kernels. This emulation flow invokes the hardware simulator in the SDAccel environment to test the functionality that will be executed on FPGA Custom Logic.
+
+The instructions below describe how to get started on SDAccel development using the HW Emulation:
+
+```
+    $ cd sdk/SDAccel/examples/xilinx/getting_started/host/helloworld_ocl/
+    $ make clean
+    $ make TARGETS=hw_emu DEVICES=$AWS_PLATFORM all
+```
+
+## Building for HW Execution
+
+The SDAccel build flow enables the developer to compile custom kernels.
+
+The instructions below describe how to build for AWS FPGA Hardware:
+
+```
+    $ cd sdk/SDAccel/examples/xilinx/getting_started/host/helloworld_ocl/
+    $ make clean
+    $ make TARGETS=hw DEVICES=$AWS_PLATFORM all
+```
+
+The build process will generate the Host and Kernel binaries. 
 Host executable: ./host.exe "UPDATE: is this the correct name, was only host"
 Kernel executable: ./xclbin/vadd.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.xclbin
 
+The binaries need to be uploaded to an AWS F1 instance to be executed.
+
 # 3. Executing your design on F1
 
-## Uploading the Host and Kernel executables	
-The next step is to transfer both the host and kernel executables to the AWS F1 instance. 		
+There are 3 steps involved in executing your design on F1:
+- Uploading the host and kernel binaries to AWS
+- Creating an Amazon FPGA Image (AFI)
+- Executing
+
+## Uploading the host and kernel binaries to AWS
 Upload data to the F1 instance, using scp with the same elements as the SSH login:
-> scp -i ~/<pem-name>.pem <from-file> <login-id>@<host-ip>:/home/<login-id>/<to file>
+```
+    $ scp -i ~/<pem-name>.pem <from-file> <login-id>@<host-ip>:/home/<login-id>/<to file>
+```
 
 - pem-name is "UPDATE: explain"
 - from-file is "UPDATE: explain , should we have two lines each with the file already filled in"
