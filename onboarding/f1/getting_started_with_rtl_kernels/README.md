@@ -11,7 +11,7 @@ You will need the following
 - A Github account - create one here
 An Amazon Web Services (AWS) account - create one here
 
-[DETAILS]
+[DETAILS](1. Setup and test your environment.md)
 
 ## 2. Run your first SDAccel program on AWS F1
 This step will show you how to:
@@ -19,7 +19,7 @@ This step will show you how to:
 - Package an existing RTL design as an SDAccel acceleration kernel
 - Compile, execute and profile a simple example accelerated with the RTL kernel
 
-[DETAILS]
+[DETAILS](2. Run your first SDAccel program on AWS F1.md)
 
 ## 3. Develop your SDAccel knowledge 
 This step will take you through an introductory online training course covering:
@@ -28,7 +28,7 @@ This step will take you through an introductory online training course covering:
 - Packaging existing RTL IP for AWS F1
 - Running a host-side application with an RTL kernel
 
-[DETAILS]
+[DETAILS](4. Practice and Experiment.md)
 
 ## 4. Practice and Experiment
 This step will show you how to:
@@ -36,7 +36,7 @@ This step will show you how to:
 - Learn more about SDAccel
 - Get support and troubleshoot issues
 
-[DETAILS]
+[DETAILS](5. Install and run SDAccel on your own machine.md)
 
 ## 5. Install and run SDAccel on your own machine
 The AWS F1 instances loaded with the FPGA developer AMI provide all the necessary tools to develop, compile, execute and debug your application in the Amazon cloud. Optionally, it is also possible to develop and compile your application on your own machine and upload it to AWS for execution and debug in the cloud.
@@ -51,4 +51,4 @@ You will need the following:
   - CentOS 6.8, CentOS 7.3 (64-bit)
   - Ubuntu Linux 16.04.1 LTS (64-bit)
 
-[DETAILS]
+[DETAILS]()
