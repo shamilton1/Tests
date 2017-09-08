@@ -11,9 +11,15 @@ This guide provides step-by-step instructions for getting started with the on-pr
 2. Building your design on-premise with SDAccel
 3. Executing your design on F1
 
+## Prequisites
+**Note**:The remainder of this guide assumes you have already setup your AMI with CLI, S3 bucket and runtime driver. 
+- If this is **not** the case, please skip the rest of this guide and review the section "Create an Amazon FPGA Image (AFI) for your kernel" in the [README.md][AWS SDAccel Readme] file for the remaining instructions.
+- if your AMI is **already configured** with an S3 bucket, runtime driver and CLI, proceed with the remaining steps in this guide.
+
+
 # 1. Installing and licensing SDAccel in your own environment
 
-## Prequisites
+## Requirements
 The supported Operating Systems for SDaccel On-premise development are:
 - Red Hat Enterprise Workstation/Server 7.2 and 7.3 (64-bit)
 - Red Hat Enterprise Workstation 6.7 and 6.8 (64-bit)
@@ -129,15 +135,17 @@ Upload data to the F1 instance, using scp with the same elements as the SSH logi
 - host-ip is "UPDATE: explain"
 - to-file is "UPDATE: explain , should we have two lines each with the file already filled in"
 
-## Login to the F1 instance
-**Note**:The remainder of this guide assumes you have already setup your AMI with CLI, S3 bucket and runtime driver. 
-- If this is **not** the case, please skip the rest of this guide and review the section "Create an Amazon FPGA Image (AFI) for your kernel" in the [README.md][AWS SDAccel Readme] file for the remaining instructions.
-- if your AMI is **already configured** with an S3 bucket, runtime driver and CLI, proceed with the remaining steps in this guide.
+## Logging-in to the F1 instance
 
 "UPDATE: need instrunctions on login link, and to use your AWS user name and pword"
 
-## Creates an Amazon FPGA Image (.awsxclbin)
-Once you have logged into the AWS F1 instance, use the following script and options your convert FPGA binary file (.xclbin) to an AWS binary file (.awsxclbin). 
+## Creating an Amazon FPGA Image (.awsxclbin)
+
+At this point in the flow, the steps are the same as for cloud-based development. An Amazon FPGA Image needs to be created...
+
+
+
+Once you have logged into the AWS F1 instance, use the following script and options your create an Amazon FPGA Image from your FPGA binary file (.xclbin) 
 
 ```
     $ SDACCEL_DIR/tools/create_sdaccel_afi.sh \
@@ -152,9 +160,9 @@ Once you have logged into the AWS F1 instance, use the following script and opti
 - dcp-folder-name is "UPDATE: explain"
 - logs-folder-name is "UPDATE: explain"
 
-This command will generate the AWS binary file (.awsxclbin) fil and an AFI (Amazon FPGA Image) ID file containing the AFI ID. The AFI ID is used to check the completion of the AFI generation process (as shown in the next step).  
+This command will generate the AWS binary file (.awsxclbin) file and an AFI (Amazon FPGA Image) ID file containing the AFI ID. The AFI ID is used to check the completion of the AFI generation process (as shown in the next step).  
 
-# Prepare the executable file 	
+## Prepare the executable file 	
 
 The first step is to rename the newly created AWS binary back to the name of the SDAccel executable. 
 - SDAccel Environment expects a file with a .xclbin file extension. 
@@ -172,8 +180,7 @@ the next step is to prepare a shell script, test.sh in this example, to execute 
 "UPDATE: we create a test file but then we don't use it???"
 "UPDATE: needs clearer instructions"
 
-source /opt/Xilinx/SDx/2017.1.rte/setup.sh
-./host
+
 
 c) Check Status of AFI generation process using AFI-ID
 cat <timestamp>_afi_id.txt # Note the AFI-ID from this command 
@@ -187,9 +194,16 @@ A finished FPGA image creation job will show "Available" State
 		}
 
 		
-Step 10: Once available execute the application on AWS F1 instance
+## Executing the application on the F1 instance
+
+Once available execute the application on AWS F1 instance
 	
-[centos@ip-172-31-79-92]$ sudo ./test.sh
+```
+    $ sudo sh
+    $ source /opt/Xilinx/SDx/2017.1.rte/setup.sh
+    $ ./host
+```
+
 Device/Slot[0] (/dev/xdma0, 0:0:1d.0)
 xclProbe found 1 FPGA slots with XDMA driver running
 INFO: Importing ./vadd.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.xclbin
