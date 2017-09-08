@@ -29,8 +29,8 @@ This requires a Xilinx login. If you do not have an existing Xilinx account, sel
 
 New Xilinx users will also need to obtain an on-premises license of Vivado. Follow these [instructions][Vivado download] to request for a node-locked or floating license: 
 
-## Clone the aws-fpga Git repository
-The AWS Github repository contains all the necessary files and script to run SDAccel and build a design for F1 instances. It also contains numerous examples that will help you learn more about SDAccel.  
+## Cloning the aws-fpga Git repository
+The AWS Github repository contains all the necessary platform definition files and setup scripts to run SDAccel and build a design for F1 instances. It also contains numerous examples that will help you learn more about SDAccel.  
 
 Execute the following command on your local machine to clone the Github repository.
 > $ git clone https://github.com/aws/aws-fpga-preview.git   "UPDATE: POINTING TO PREVIEW PAGE"
