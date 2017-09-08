@@ -21,7 +21,7 @@ The supported Operating Systems for SDaccel On-premise development are:
 - Ubuntu Linux 16.04.1 LTS (64-bit)
 
 ## Downloading the SDAccel Development Environment
-In order to develop any SDAccel Application on-premise, you will need to install the same version of SDAccel as deployed on AWS F1. The download link can be found here:
+In order to develop any SDAccel application on-premise, you will need to install the same version of SDAccel as deployed on AWS F1. The download link can be found here:
 https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_SDx_op_2017.1_sdx_0715_1_Lin64.bin&akdm=0
 
 This requires a Xilinx login. If you do not have an existing Xilinx account, select "Create your account".
@@ -30,28 +30,28 @@ This requires a Xilinx login. If you do not have an existing Xilinx account, sel
 
 New Xilinx users will also need to obtain an on-premises license of Vivado. Follow these [instructions][Vivado download] to request for a node-locked or floating license: 
 
+NEED TO CLARITY THIS PROCEDURE
+
 ## Cloning the aws-fpga Git repository
 The AWS Github repository contains all the necessary platform definition files and setup scripts to run SDAccel and build a design for F1 instances. It also contains numerous examples that will help you learn more about SDAccel.  
 
 Execute the following command on your local machine to clone the Github repository.
 > $ git clone https://github.com/aws/aws-fpga-preview.git   "UPDATE: POINTING TO PREVIEW PAGE"
 
+> $ cd aws-fpga-preview                                      
+
+> $ source sdaccel_setup.sh
+
+**Note**: Sourcing sdaccel_setup.sh may show some errors as it also tries to install runtime drivers which requires sudo access. These errors are nonintrusive, and you can ignore these error messages. 
 
 
 THOMAS: This needs to go elsewhere... This guide uses an existing example to step you through the entire on-premise development flow. The example used in this guide is the Vector Addition with RTL Kernel example from SDAccel Github. 
 
 # 2. Building your design on-premise with SDAccel
 
-    
-"UPDATE: have we already done the example dirs? this was in the title previously and I removed it"
-
-The SDAccel Environment targets a specific platform. The platform used on the AWS F1 instance must be downloaded from AWS. Once you have completed the previous step and downloaded the Git repository, the following commands will downloand the AWS F1 platform description to your local host.
+Once you have completed the previous step and downloaded the Git repository, the following commands will downloand the AWS F1 platform description to your local host.
  
-> $ cd aws-fpga-preview                                      
-> $ source sdaccel_setup.sh
 
-
-**Note**: Sourcing sdaccel_setup.sh may show some errors as it also tries to install runtime drivers which requires sudo access. These errors are nonintrusive, and you can ignore these error messages. 
 
 	
 # Running On-premise
