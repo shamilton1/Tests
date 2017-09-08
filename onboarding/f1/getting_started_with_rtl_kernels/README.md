@@ -1,8 +1,7 @@
 # Getting Started on AWS F1 with SDAccel and RTL Kernels
 
-<br>
 This getting started guide is intended for hardware designers looking to create AWS F1 applications leveraging new or existing RTL code.
-<br>
+<br><br>
 
 ## 1. Setup and testing your environment
 This step will show you how to:
