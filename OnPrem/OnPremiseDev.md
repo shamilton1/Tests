@@ -24,7 +24,7 @@ The supported Operating Systems for SDaccel On-premise development are:
 # 1. Installing and licensing SDAccel in your own environment
 
 ## Downloading the SDAccel Development Environment
-In order to develop any SDAccel application on-premise, you will need to install the same version of SDAccel as deployed on AWS F1. The download link can be found here:
+In order to develop any SDAccel application on-premise, you will need to install the same version of SDAccel as deployed on AWS F1. The SDAccel installer can be found here:
 https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_SDx_op_2017.1_sdx_0715_1_Lin64.bin&akdm=0
 
 This requires a Xilinx login. If you do not have an existing Xilinx account, select "Create your account".
@@ -33,12 +33,12 @@ This requires a Xilinx login. If you do not have an existing Xilinx account, sel
 
 New Xilinx users will also need to obtain an on-premises license of Vivado. Follow these [instructions][Vivado download] to request for a node-locked or floating license: 
 
-NEED TO CLARITY THIS PROCEDURE
+NEED TO CLARIFY THIS PROCEDURE
 
 ## Cloning the aws-fpga Git repository
 The AWS Github repository contains all the necessary platform definition files and setup scripts to run SDAccel and build a design for F1 instances. It also contains numerous examples that will help you learn more about SDAccel.  
 
-Execute the following command on your local machine to clone the Github repository and configure the SDAccel environment:
+Execute the following commands on your local machine to clone the Github repository and configure the SDAccel environment:
 ```
     $ git clone https://github.com/aws/aws-fpga-preview.git
     $ cd aws-fpga-preview                                      
@@ -50,17 +50,11 @@ Execute the following command on your local machine to clone the Github reposito
 
 # 2. Building your design on-premise with SDAccel
 
-Once you have completed the previous step , the following commands will download the AWS F1 platform description to your local host.
- 
-THOMAS: This needs to go elsewhere... This guide uses an existing example to step you through the entire on-premise development flow. The example used in this guide is the Vector Addition with RTL Kernel example from SDAccel Github.  
-
-This step will show you how to:
+These steps will show you how to:
 - Confirm you are able to run SDAccel on your local machine
 - Generate executables which you can then deploy on the F1 instance.
 
-The example used in this guide is complete and no further develoment is required,
-
-You can run the exact same steps and command on-premise as on an AWS EC2 instance. 
+You can run the exact same steps and command on-premise as on an AWS EC2 instance. IMPROVE WORDING...
 
 ## Starting the GUI
 This step shows how to invoke the GUI. 
