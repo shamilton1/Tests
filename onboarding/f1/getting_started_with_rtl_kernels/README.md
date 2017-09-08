@@ -1,6 +1,8 @@
 # Getting Started on AWS F1 with SDAccel and RTL Kernels
 
+<br>
 This getting started guide is intended for hardware designers looking to create AWS F1 applications leveraging new or existing RTL code.
+<br>
 
 ## 1. Setup and testing your environment
 This step will show you how to:
@@ -14,6 +16,7 @@ You will need the following:
 
 [**DETAILS**][1]
 
+<br>
 
 ## 2. Run your first SDAccel program on AWS F1
 This step will show you how to:
@@ -23,6 +26,7 @@ This step will show you how to:
 
 [**DETAILS**][2]
 
+<br>
 
 ## 3. Develop your SDAccel knowledge 
 This step will take you through an introductory online training course covering:
@@ -33,6 +37,7 @@ This step will take you through an introductory online training course covering:
 
 [**DETAILS**][3]
 
+<br>
 
 ## 4. Practice and Experiment
 This step will show you how to:
@@ -42,6 +47,7 @@ This step will show you how to:
 
 [**DETAILS**][4]
 
+<br>
 
 ## 5. Install and run SDAccel on your own machine
 The AWS F1 instances loaded with the FPGA developer AMI provide all the necessary tools to develop, compile, execute and debug your application in the Amazon cloud. Optionally, it is also possible to develop and compile your application on your own machine and upload it to AWS for execution and debug in the cloud.
