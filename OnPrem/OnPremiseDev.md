@@ -11,7 +11,7 @@ This guide provides step-by-step instructions for getting started with the on-pr
 2. Building your design on-premise with SDAccel
 3. Executing your design on F1
 
-#1. Installing and licensing SDAccel in your own environment
+# 1. Installing and licensing SDAccel in your own environment
 
 ## Prequisites
 The supported Operating Systems for SDaccel On-premise development are:
@@ -39,7 +39,7 @@ Execute the following command on your local machine to clone the Github reposito
 
 THOMAS: This needs to go elsewhere... This guide uses an existing example to step you through the entire on-premise development flow. The example used in this guide is the Vector Addition with RTL Kernel example from SDAccel Github. 
 
-#2. Building your design on-premise with SDAccel
+# 2. Building your design on-premise with SDAccel
 
     
 "UPDATE: have we already done the example dirs? this was in the title previously and I removed it"
