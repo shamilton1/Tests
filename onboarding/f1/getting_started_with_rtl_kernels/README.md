@@ -4,7 +4,7 @@ This getting started guide is intended for hardware designers looking to create 
 
 ## 1. Setup and testing your environment
 This step will show you how to:
-- Start and AWS F1 instance
+- Start an AWS F1 instance
 - Load the SDAccel environment on AWS F1
 You will need the following
 - A Xilinx account - create one here
@@ -13,6 +13,8 @@ An Amazon Web Services (AWS) account - create one here
 
 [DETAILS](1.%20Setup%20and%20test%20your%20environment.md)
 
+
+
 ## 2. Run your first SDAccel program on AWS F1
 This step will show you how to:
 - Download SDAccel examples from Github
@@ -20,6 +22,8 @@ This step will show you how to:
 - Compile, execute and profile a simple example accelerated with the RTL kernel
 
 [DETAILS](2.%20Run%20your%20first%20SDAccel%20program%20on%20AWS%20F1.md)
+
+
 
 ## 3. Develop your SDAccel knowledge 
 This step will take you through an introductory online training course covering:
@@ -30,6 +34,8 @@ This step will take you through an introductory online training course covering:
 
 [DETAILS](3.%20Develop%20your%20SDAccel%20knowledge.md)
 
+
+
 ## 4. Practice and Experiment
 This step will show you how to:
 - Run additional labs and examples on F1
@@ -38,12 +44,17 @@ This step will show you how to:
 
 [DETAILS](4.%20Practice%20and%20Experiment.md)
 
+
+
 ## 5. Install and run SDAccel on your own machine
 The AWS F1 instances loaded with the FPGA developer AMI provide all the necessary tools to develop, compile, execute and debug your application in the Amazon cloud. Optionally, it is also possible to develop and compile your application on your own machine and upload it to AWS for execution and debug in the cloud.
+
 This optional step will show you how to:
 - Install and license SDAccel locally on your machine
 - Compile a simple example locally
 - Upload and execute it on AWS F1
+
+
 You will need the following:
 - A Linux computer running either:
   - Red Hat Enterprise Workstation/Server 7.2 and 7.3 (64-bit)
