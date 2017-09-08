@@ -36,11 +36,11 @@ NEED TO CLARITY THIS PROCEDURE
 The AWS Github repository contains all the necessary platform definition files and setup scripts to run SDAccel and build a design for F1 instances. It also contains numerous examples that will help you learn more about SDAccel.  
 
 Execute the following command on your local machine to clone the Github repository.
-> $ git clone https://github.com/aws/aws-fpga-preview.git   "UPDATE: POINTING TO PREVIEW PAGE"
-
-> $ cd aws-fpga-preview                                      
-
-> $ source sdaccel_setup.sh
+```
+    $ git clone https://github.com/aws/aws-fpga-preview.git   "UPDATE: POINTING TO PREVIEW PAGE"
+    $ cd aws-fpga-preview                                      
+    $ source sdaccel_setup.sh
+```
 
 **Note**: Sourcing sdaccel_setup.sh may show some errors as it also tries to install runtime drivers which requires sudo access. These errors are nonintrusive, and you can ignore these error messages. 
 
