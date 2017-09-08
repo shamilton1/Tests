@@ -6,13 +6,13 @@ This getting started guide is intended for hardware designers looking to create 
 This step will show you how to:
 - Start an AWS F1 instance
 - Load the SDAccel environment on AWS F1
-You will need the following
-- A Xilinx account - create one here
-- A Github account - create one here
-An Amazon Web Services (AWS) account - create one here
 
-[DETAILS](1.%20Setup%20and%20test%20your%20environment.md)
+You will need the following:
+- A Xilinx account - create one [here](https://www.xilinx.com/registration/create-account.html)
+- A Github account - create one [here](https://github.com/join)
+- An Amazon Web Services (AWS) account - create one [here](https://aws.amazon.com/)
 
+[DETAILS][1]
 
 
 ## 2. Run your first SDAccel program on AWS F1
@@ -21,8 +21,7 @@ This step will show you how to:
 - Package an existing RTL design as an SDAccel acceleration kernel
 - Compile, execute and profile a simple example accelerated with the RTL kernel
 
-[DETAILS](2.%20Run%20your%20first%20SDAccel%20program%20on%20AWS%20F1.md)
-
+[DETAILS]
 
 
 ## 3. Develop your SDAccel knowledge 
@@ -32,8 +31,7 @@ This step will take you through an introductory online training course covering:
 - Packaging existing RTL IP for AWS F1
 - Running a host-side application with an RTL kernel
 
-[DETAILS](3.%20Develop%20your%20SDAccel%20knowledge.md)
-
+[DETAILS][3]
 
 
 ## 4. Practice and Experiment
@@ -42,8 +40,7 @@ This step will show you how to:
 - Learn more about SDAccel
 - Get support and troubleshoot issues
 
-[DETAILS](4.%20Practice%20and%20Experiment.md)
-
+[DETAILS][4]
 
 
 ## 5. Install and run SDAccel on your own machine
@@ -54,7 +51,6 @@ This optional step will show you how to:
 - Compile a simple example locally
 - Upload and execute it on AWS F1
 
-
 You will need the following:
 - A Linux computer running either:
   - Red Hat Enterprise Workstation/Server 7.2 and 7.3 (64-bit)
@@ -62,4 +58,10 @@ You will need the following:
   - CentOS 6.8, CentOS 7.3 (64-bit)
   - Ubuntu Linux 16.04.1 LTS (64-bit)
 
-[DETAILS](5.%20Install%20and%20run%20SDAccel%20on%20your%20own%20machine.md)
+[DETAILS][5]
+
+[1]: 1.%20Setup%20and%20test%20your%20environment.md
+[2]: 2.%20Run%20your%20first%20SDAccel%20program%20on%20AWS%20F1.md
+[3]: 3.%20Develop%20your%20SDAccel%20knowledge.md
+[4]: 4.%20Practice%20and%20Experiment.md
+[5]: 5.%20Install%20and%20run%20SDAccel%20on%20your%20own%20machine.md
