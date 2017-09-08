@@ -1,36 +1,47 @@
 # On-Premise Development and F1 Deployment Guide
 
-The SDAccel Environment supports the following development models:
-- Cloud based development and using the AWS F1 clound environment.
-- On-premise development using your own local workstations. 
+The SDAccel flow for F1 supports the following development models:
+- Cloud based development on AWS EC2 clound instances
+- On-premise development on your own local workstations
 
-In both cases, the final executables are deployed on the AWS F1 instance. 
+In both cases, the final executables are deployed and executed on an AWS F1 instance. 
 
-This guide provides quick step-by-step instructions on the on-premise flow.   
+This guide provides step-by-step instructions for getting started with the on-premise flow and covers the following:
+1. Installing and licensing SDAccel in your own environment
+2. Building your design on-premise with SDAccel
+3. Executing your design on F1
 
+#1. Installing and licensing SDAccel in your own environment
 
-# Downloading the SDAccel Development Environment & License
-In order to develop any SDAccel Application on-premise, you will neeed the latest version of the SDAccel Enviornment and a license.	Please refer to the Github Page for the [SDAccel download and License instructions]. "UPDATE: LINK POINTS TO HDK 2017.1..NEED NEW PAGE OR UPDATE PAGE OR PUT THIS INFOR BELOW?"
-
+## Prequisites
 The supported Operating Systems for SDaccel On-premise development are:
 - Red Hat Enterprise Workstation/Server 7.2 and 7.3 (64-bit)
 - Red Hat Enterprise Workstation 6.7 and 6.8 (64-bit)
 - CentOS 6.8, CentOS 7.3 (64-bit)
 - Ubuntu Linux 16.04.1 LTS (64-bit)
 
-The SDAccel Development Enironment can be downloaded from [here.][SDAccel Download Page].
+## Downloading the SDAccel Development Environment & License
+In order to develop any SDAccel Application on-premise, you will need to install the same version of SDAccel as deployed on AWS F1. The download link can be found [here](https://github.com/aws/aws-fpga/blob/69e8d41270cb8f6506c3f25e7a20745bc52b20a1/hdk/docs/on_premise_licensing_help.md#downloading-the-development-tool-from-xilinx)
+
 This requires a Xilinx login. If you do not have an existing Xilinx account, select "Create your account".
+
+## Requesting a license
 
 New Xilinx users will also need to obtain an on-premises license of Vivado. Follow these [instructions][Vivado download] to request for a node-locked or floating license: 
 
-# Download the aws-fpga Git repository
-This guide uses an existing example to step you through the entire on-premise development flow. The example used in this guide is the Vector Addition with RTL Kernel example from SDAccel Github. 
+## Clone the aws-fpga Git repository
+The AWS Github repository contains all the necessary files and script to run SDAccel and build a design for F1 instances. It also contains numerous examples that will help you learn more about SDAccel.  
 
-Execute the following command on your local machine to download the SDAccel examples.
+Execute the following command on your local machine to clone the Github repository.
 > $ git clone https://github.com/aws/aws-fpga-preview.git   "UPDATE: POINTING TO PREVIEW PAGE"
 
+
+
+THOMAS: This needs to go elsewhere... This guide uses an existing example to step you through the entire on-premise development flow. The example used in this guide is the Vector Addition with RTL Kernel example from SDAccel Github. 
+
+#2. Building your design on-premise with SDAccel
+
     
-# Download the Platform 
 "UPDATE: have we already done the example dirs? this was in the title previously and I removed it"
 
 The SDAccel Environment targets a specific platform. The platform used on the AWS F1 instance must be downloaded from AWS. Once you have completed the previous step and downloaded the Git repository, the following commands will downloand the AWS F1 platform description to your local host.
