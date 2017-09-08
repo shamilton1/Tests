@@ -1,7 +1,7 @@
 # On-Premise Development and F1 Deployment Guide
 
 The SDAccel flow for F1 supports the following development models:
-- Cloud based development on AWS EC2 clound instances
+- Cloud based development on AWS EC2 cloud instances
 - On-premise development on your own local workstations
 
 In both cases, the final executables are deployed and executed on an AWS F1 instance. 
@@ -20,8 +20,9 @@ The supported Operating Systems for SDaccel On-premise development are:
 - CentOS 6.8, CentOS 7.3 (64-bit)
 - Ubuntu Linux 16.04.1 LTS (64-bit)
 
-## Downloading the SDAccel Development Environment & License
-In order to develop any SDAccel Application on-premise, you will need to install the same version of SDAccel as deployed on AWS F1. The download link can be found [here](https://github.com/aws/aws-fpga/blob/69e8d41270cb8f6506c3f25e7a20745bc52b20a1/hdk/docs/on_premise_licensing_help.md#downloading-the-development-tool-from-xilinx)
+## Downloading the SDAccel Development Environment
+In order to develop any SDAccel Application on-premise, you will need to install the same version of SDAccel as deployed on AWS F1. The download link can be found here:
+https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_SDx_op_2017.1_sdx_0715_1_Lin64.bin&akdm=0
 
 This requires a Xilinx login. If you do not have an existing Xilinx account, select "Create your account".
 
