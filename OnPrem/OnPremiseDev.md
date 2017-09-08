@@ -12,12 +12,7 @@ This guide provides step-by-step instructions for getting started with the on-pr
 3. Executing your design on F1
 
 ## Prequisites
-**Note**:The remainder of this guide assumes you have already setup your AMI with CLI, S3 bucket and runtime driver. 
-- If this is **not** the case, please skip the rest of this guide and review the section "Create an Amazon FPGA Image (AFI) for your kernel" in the [README.md][AWS SDAccel Readme] file for the remaining instructions.
-- if your AMI is **already configured** with an S3 bucket, runtime driver and CLI, proceed with the remaining steps in this guide.
-
-
-# 1. Installing and licensing SDAccel in your own environment
+Before going through the steps described in this document, the user should have completed at least once the steps described in the [AWS SDAccel README file](https://github.com/aws/aws-fpga-preview/blob/master/sdk/SDAccel/README.md).
 
 ## Requirements
 The supported Operating Systems for SDaccel On-premise development are:
@@ -25,6 +20,8 @@ The supported Operating Systems for SDaccel On-premise development are:
 - Red Hat Enterprise Workstation 6.7 and 6.8 (64-bit)
 - CentOS 6.8, CentOS 7.3 (64-bit)
 - Ubuntu Linux 16.04.1 LTS (64-bit)
+
+# 1. Installing and licensing SDAccel in your own environment
 
 ## Downloading the SDAccel Development Environment
 In order to develop any SDAccel application on-premise, you will need to install the same version of SDAccel as deployed on AWS F1. The download link can be found here:
@@ -49,8 +46,6 @@ Execute the following command on your local machine to clone the Github reposito
 ```
 
 **Note**: Sourcing sdaccel_setup.sh may show some errors as it also tries to install runtime drivers which requires sudo access. These errors are nonintrusive, and you can ignore these error messages. 
-
-
 
 
 # 2. Building your design on-premise with SDAccel
@@ -85,7 +80,6 @@ The instructions below describe how to get started on SDAccel development using 
     $ make TARGETS=sw_emu DEVICES=$AWS_PLATFORM all
 ```
 
-
 ## Running HW Emulation
 
 The SDAccel hardware emulation flow enables the developer to check the correctness of the logic generated for the custom kernels. This emulation flow invokes the hardware simulator in the SDAccel environment to test the functionality that will be executed on FPGA Custom Logic.
@@ -118,12 +112,12 @@ The binaries need to be uploaded to an AWS F1 instance to be executed.
 
 # 3. Executing your design on F1
 
-There are 3 steps involved in executing your design on F1:
-- Uploading the host and kernel binaries to AWS
-- Creating an Amazon FPGA Image (AFI)
-- Executing
+To execute a design build on-premise on F1 you first need to upload it to the AWS cloud. After that the steps are identical as if you had developped your design in the clound to begin with.
+
+In this section, we will explain how to upload the design to the AWS cloud and link to the AWS SDAccel REAMDE for instructions on how to create an Amazon FPGA Image and execute your design
 
 ## Uploading the host and kernel binaries to AWS
+COMMENT: probably needs more details here...
 Upload data to the F1 instance, using scp with the same elements as the SSH login:
 ```
     $ scp -i ~/<pem-name>.pem <from-file> <login-id>@<host-ip>:/home/<login-id>/<to file>
@@ -135,9 +129,55 @@ Upload data to the F1 instance, using scp with the same elements as the SSH logi
 - host-ip is "UPDATE: explain"
 - to-file is "UPDATE: explain , should we have two lines each with the file already filled in"
 
-## Logging-in to the F1 instance
+## Executing your design on F1
 
-"UPDATE: need instrunctions on login link, and to use your AWS user name and pword"
+[Instructions on how to create and AFI, ...](https://github.com/aws/aws-fpga-preview/blob/master/sdk/SDAccel/README.md#create-an-amazon-fpga-image-afi-for-your-kernel)
+
+	
+# Additional Resources
+
+The [AWS SDAccel README].
+
+Xilinx web portal for [Xilinx SDAccel documentation] and for [Xilinx SDAccel GitHub repository]
+
+Links pointing to **latest** version of the user guides
+1. [UG1023: SDAccel Environment User Guide][latest SDAccel Environment User Guide]
+1. [UG1021: SDAccel Environment Tutorial: Getting Started Guide (including emulation/build/running on H/W flow)][latest UG1021]
+1. [UG1207: SDAccel Environment Optimization Guide][latest SDAccel Environment Optimization Guide]
+1. [UG949: UltraFast Design Methodology Guide for the Vivado Design Suite][latest UG949]
+
+Links pointing to **2017.1** version of the user guides
+1. [UG1023: SDAccel Environment User Guide][UG1023 2017.1]
+1. [UG1021: SDAccel Environment Tutorial: Getting Started Guide (including emulation/build/running on H/W flow)][UG1021 2017.1]
+1. [UG1207: SDAccel Environment Optimization Guide][UG1207 2017.1]
+1. [UG1238: SDx Development Environment Release Notes, Installation, and Licensing Guide][UG1238 2017.1]
+
+[SDAccel_landing_page]: https://www.xilinx.com/products/design-tools/software-zone/sdaccel.html
+[VHLS_landing_page]: https://www.xilinx.com/products/design-tools/vivado/integration/esl-design.html
+[Vivado_landing_page]: https://www.xilinx.com/products/design-tools/vivado.html
+
+[latest SDAccel Environment User Guide]: https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1023-sdaccel-user-guide.pdf
+[latest UG1021]: https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1021-sdaccel-intro-tutorial.pdf
+[latest SDAccel Environment Optimization Guide]: https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf
+[latest UG949]: https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug949-vivado-design-methodology.pdf
+[latest UG902]: https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug902-vivado-high-level-synthesis.pdf
+
+[UG1023 2017.1]: https://www.xilinx.com/support/documentation/sw_manuals/xilinx2017_1/ug1023-sdaccel-user-guide.pdf
+[UG1021 2017.1]: https://www.xilinx.com/support/documentation/sw_manuals/xilinx2017_1/ug1021-sdaccel-intro-tutorial.pdf
+[UG1207 2017.1]: https://www.xilinx.com/support/documentation/sw_manuals/xilinx2017_1/ug1207-sdaccel-optimization-guide.pdf
+[UG1238 2017.1]:http://www.xilinx.com/support/documentation/sw_manuals/xilinx2017_1/ug1238-sdx-rnil.pdf
+[Xilinx SDAccel documentation]: https://www.xilinx.com/products/design-tools/software-zone/sdaccel.html#documentation
+[Xilinx SDAccel GitHub repository]: https://github.com/Xilinx/SDAccel_Examples
+
+[SDAccel download and License instructions]:https://github.com/aws/aws-fpga/blob/master/hdk/docs/on_premise_licensing_help.md
+[Vivado download]:https://www.xilinx.com/products/design-tools/acceleration-zone/ef-vivado-sdx-vu9p-op-fl-nl.html
+[SDAccel Download Page]: https://www.xilinx.com/registration/sign-in.html?oamProtectedResource=wh%3Dwww.xilinx.com%20wu%3D%2Fmember%2Fforms%2Fdownload%2Fxef.html%3Ffilename%3DXilinx_SDx_op_2017.1_sdx_0715_1_Lin64.bin%26akdm%3D0%20wo%3D1%20rh%3Dhttp%3A%2F%2Fwww.xilinx.com%20ru%3D%252Fmember%252Fforms%252Fdownload%252Fxef.html%20rq%3Dfilename%253DXilinx_SDx_op_2017.1_sdx_0715_1_Lin64.bin%2526akdm%253D0
+[AWS SDAccel Readme]: ../README.md
+
+
+
+
+# BACKUP
 
 ## Creating an Amazon FPGA Image (.awsxclbin)
 
@@ -214,46 +254,3 @@ All Device results match CPU results!
 TEST PASSED.	
 
 
-	
-
-	
-	
-# Additional Resources
-
-The [AWS SDAccel README].
-
-Xilinx web portal for [Xilinx SDAccel documentation] and for [Xilinx SDAccel GitHub repository]
-
-Links pointing to **latest** version of the user guides
-1. [UG1023: SDAccel Environment User Guide][latest SDAccel Environment User Guide]
-1. [UG1021: SDAccel Environment Tutorial: Getting Started Guide (including emulation/build/running on H/W flow)][latest UG1021]
-1. [UG1207: SDAccel Environment Optimization Guide][latest SDAccel Environment Optimization Guide]
-1. [UG949: UltraFast Design Methodology Guide for the Vivado Design Suite][latest UG949]
-
-Links pointing to **2017.1** version of the user guides
-1. [UG1023: SDAccel Environment User Guide][UG1023 2017.1]
-1. [UG1021: SDAccel Environment Tutorial: Getting Started Guide (including emulation/build/running on H/W flow)][UG1021 2017.1]
-1. [UG1207: SDAccel Environment Optimization Guide][UG1207 2017.1]
-1. [UG1238: SDx Development Environment Release Notes, Installation, and Licensing Guide][UG1238 2017.1]
-
-[SDAccel_landing_page]: https://www.xilinx.com/products/design-tools/software-zone/sdaccel.html
-[VHLS_landing_page]: https://www.xilinx.com/products/design-tools/vivado/integration/esl-design.html
-[Vivado_landing_page]: https://www.xilinx.com/products/design-tools/vivado.html
-
-[latest SDAccel Environment User Guide]: https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1023-sdaccel-user-guide.pdf
-[latest UG1021]: https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1021-sdaccel-intro-tutorial.pdf
-[latest SDAccel Environment Optimization Guide]: https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf
-[latest UG949]: https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug949-vivado-design-methodology.pdf
-[latest UG902]: https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug902-vivado-high-level-synthesis.pdf
-
-[UG1023 2017.1]: https://www.xilinx.com/support/documentation/sw_manuals/xilinx2017_1/ug1023-sdaccel-user-guide.pdf
-[UG1021 2017.1]: https://www.xilinx.com/support/documentation/sw_manuals/xilinx2017_1/ug1021-sdaccel-intro-tutorial.pdf
-[UG1207 2017.1]: https://www.xilinx.com/support/documentation/sw_manuals/xilinx2017_1/ug1207-sdaccel-optimization-guide.pdf
-[UG1238 2017.1]:http://www.xilinx.com/support/documentation/sw_manuals/xilinx2017_1/ug1238-sdx-rnil.pdf
-[Xilinx SDAccel documentation]: https://www.xilinx.com/products/design-tools/software-zone/sdaccel.html#documentation
-[Xilinx SDAccel GitHub repository]: https://github.com/Xilinx/SDAccel_Examples
-
-[SDAccel download and License instructions]:https://github.com/aws/aws-fpga/blob/master/hdk/docs/on_premise_licensing_help.md
-[Vivado download]:https://www.xilinx.com/products/design-tools/acceleration-zone/ef-vivado-sdx-vu9p-op-fl-nl.html
-[SDAccel Download Page]: https://www.xilinx.com/registration/sign-in.html?oamProtectedResource=wh%3Dwww.xilinx.com%20wu%3D%2Fmember%2Fforms%2Fdownload%2Fxef.html%3Ffilename%3DXilinx_SDx_op_2017.1_sdx_0715_1_Lin64.bin%26akdm%3D0%20wo%3D1%20rh%3Dhttp%3A%2F%2Fwww.xilinx.com%20ru%3D%252Fmember%252Fforms%252Fdownload%252Fxef.html%20rq%3Dfilename%253DXilinx_SDx_op_2017.1_sdx_0715_1_Lin64.bin%2526akdm%253D0
-[AWS SDAccel Readme]: ../README.md
