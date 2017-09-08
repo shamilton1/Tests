@@ -35,9 +35,9 @@ NEED TO CLARITY THIS PROCEDURE
 ## Cloning the aws-fpga Git repository
 The AWS Github repository contains all the necessary platform definition files and setup scripts to run SDAccel and build a design for F1 instances. It also contains numerous examples that will help you learn more about SDAccel.  
 
-Execute the following command on your local machine to clone the Github repository.
+Execute the following command on your local machine to clone the Github repository and configure the SDAccel environment:
 ```
-    $ git clone https://github.com/aws/aws-fpga-preview.git   "UPDATE: POINTING TO PREVIEW PAGE"
+    $ git clone https://github.com/aws/aws-fpga-preview.git
     $ cd aws-fpga-preview                                      
     $ source sdaccel_setup.sh
 ```
@@ -45,33 +45,37 @@ Execute the following command on your local machine to clone the Github reposito
 **Note**: Sourcing sdaccel_setup.sh may show some errors as it also tries to install runtime drivers which requires sudo access. These errors are nonintrusive, and you can ignore these error messages. 
 
 
-THOMAS: This needs to go elsewhere... This guide uses an existing example to step you through the entire on-premise development flow. The example used in this guide is the Vector Addition with RTL Kernel example from SDAccel Github. 
+
 
 # 2. Building your design on-premise with SDAccel
 
-Once you have completed the previous step and downloaded the Git repository, the following commands will downloand the AWS F1 platform description to your local host.
+Once you have completed the previous step , the following commands will download the AWS F1 platform description to your local host.
  
+THOMAS: This needs to go elsewhere... This guide uses an existing example to step you through the entire on-premise development flow. The example used in this guide is the Vector Addition with RTL Kernel example from SDAccel Github.  
 
-
-	
-# Running On-premise
-The example used in this guide is complete and no further develoment is required, however this step will:
+This step will show you how to:
 - Confirm you are able to run SDAccel on your local machine
 - Generate executables which you can then deploy on the F1 instance.
 
+The example used in this guide is complete and no further develoment is required,
+
+## Running On-premise
+
+
 Following on from the commands issued in the previous step, execute the following commands in your local shell.
- 
-> cd sdk/SDAccel/examples/xilinx/getting_started/rtl_kernel/rtl_vadd
 
-> make all TARGETS=hw DEVICES=$AWS_PLATFORM
+```
+    $ cd sdk/SDAccel/examples/xilinx/getting_started/rtl_kernel/rtl_vadd
+    $ make all TARGETS=hw DEVICES=$AWS_PLATFORM
+```
 
-	
 The build process will generate the Host and Kernel executables. 
 Host executable: ./host.exe "UPDATE: is this the correct name, was only host"
 Kernel executable: ./xclbin/vadd.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.xclbin
 
+# 3. Executing your design on F1
 
-# Uploading the Host and Kernel executables	
+## Uploading the Host and Kernel executables	
 The next step is to transfer both the host and kernel executables to the AWS F1 instance. 		
 Upload data to the F1 instance, using scp with the same elements as the SSH login:
 > scp -i ~/<pem-name>.pem <from-file> <login-id>@<host-ip>:/home/<login-id>/<to file>
@@ -82,29 +86,24 @@ Upload data to the F1 instance, using scp with the same elements as the SSH logi
 - host-ip is "UPDATE: explain"
 - to-file is "UPDATE: explain , should we have two lines each with the file already filled in"
 
-# Login to the F1 instance
+## Login to the F1 instance
 **Note**:The remainder of this guide assumes you have already setup your AMI with CLI, S3 bucket and runtime driver. 
 - If this is **not** the case, please skip the rest of this guide and review the section "Create an Amazon FPGA Image (AFI) for your kernel" in the [README.md][AWS SDAccel Readme] file for the remaining instructions.
 - if your AMI is **already configured** with an S3 bucket, runtime driver and CLI, proceed with the remaining steps in this guide.
 
 "UPDATE: need instrunctions on login link, and to use your AWS user name and pword"
 
-# Creates an AWS FPGA binary file (.awsxclbin)
+## Creates an Amazon FPGA Image (.awsxclbin)
 Once you have logged into the AWS F1 instance, use the following script and options your convert FPGA binary file (.xclbin) to an AWS binary file (.awsxclbin). 
 
-
-> $ SDACCEL_DIR/tools/create_sdaccel_afi.sh \
-
-> -xclbin=vadd.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.xclbin \
-
-> -o=<output_awsxclbin_filename> \
-
-> -s3_bucket=<bucket-name> \
-
-> -s3_dcp_key=<dcp-folder-name> \
-
-> -s3_log <logs-folder-name>
-
+```
+    $ SDACCEL_DIR/tools/create_sdaccel_afi.sh \
+        -xclbin=vadd.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.xclbin \
+        -o=<output_awsxclbin_filename> \
+        -s3_bucket=<bucket-name> \
+        -s3_dcp_key=<dcp-folder-name> \
+        -s3_log <logs-folder-name>
+```
 - output_awsxclbin_filename is "UPDATE: explain"
 - bucket-name is "UPDATE: explain"
 - dcp-folder-name is "UPDATE: explain"
