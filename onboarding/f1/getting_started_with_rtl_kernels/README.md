@@ -21,7 +21,7 @@ This step will show you how to:
 - Package an existing RTL design as an SDAccel acceleration kernel
 - Compile, execute and profile a simple example accelerated with the RTL kernel
 
-[DETAILS]
+[DETAILS][2]
 
 
 ## 3. Develop your SDAccel knowledge 
