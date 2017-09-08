@@ -36,7 +36,7 @@ This step will show you how to:
 - Learn more about SDAccel
 - Get support and troubleshoot issues
 
-[DETAILS](5. Install and run SDAccel on your own machine.md)
+[DETAILS](4.%20Practice%20and%20Experiment.md)
 
 ## 5. Install and run SDAccel on your own machine
 The AWS F1 instances loaded with the FPGA developer AMI provide all the necessary tools to develop, compile, execute and debug your application in the Amazon cloud. Optionally, it is also possible to develop and compile your application on your own machine and upload it to AWS for execution and debug in the cloud.
