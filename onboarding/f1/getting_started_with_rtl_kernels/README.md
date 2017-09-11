@@ -65,8 +65,8 @@ You will need the following:
 
 [**DETAILS**][5]
 
-[1]: 1.%20Setup%20and%20test%20your%20environment.md
-[2]: 2.%20Run%20your%20first%20SDAccel%20program%20on%20AWS%20F1.md
-[3]: 3.%20Develop%20your%20SDAccel%20knowledge.md
-[4]: 4.%20Practice%20and%20Experiment.md
-[5]: 5.%20Install%20and%20run%20SDAccel%20on%20your%20own%20machine.md
+[1]: 1_Setup_and_test_your_environment.md
+[2]: 2_Run_your_first_SDAccel_program_on_AWS_F1.md
+[3]: 3_Develop_your_SDAccel_knowledge.md
+[4]: 4_Practice_and_Experiment.md
+[5]: 5_Install_and_run_SDAccel_on_your_own_machine.md
