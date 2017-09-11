@@ -1,3 +1,3 @@
 # 5. Install and run SDAccel on your own machine
 
-Coming soon...
+*Link to Uday's step-by-step instructions for running on-premise*
