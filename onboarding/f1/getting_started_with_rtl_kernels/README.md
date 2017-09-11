@@ -6,7 +6,9 @@ This getting started guide is intended for hardware designers looking to create 
 ## 1. Setup and testing your environment on AWS F1
 This step will show you how to:
 - Start an AWS F1 instance
-- Load the SDAccel environment on AWS F1
+- Configure the SDAccel environment on AWS F1
+- Download SDAccel examples from Github
+- Test your environment
 
 You will need the following:
 - A Xilinx account - create one [here](https://www.xilinx.com/registration/create-account.html)
@@ -19,7 +21,6 @@ You will need the following:
 
 ## 2. Run your first SDAccel program on AWS F1
 This step will show you how to:
-- Download SDAccel examples from Github
 - Package an existing RTL design as an SDAccel acceleration kernel
 - Compile, execute and profile a simple example accelerated with the RTL kernel
 
