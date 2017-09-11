@@ -1,4 +1,4 @@
-# 1. Setup and testing your environment
+# 1. Setup and testing your environment on AWS F1
 
 In this step you will learn how to login to AWS, start an F1 instance, source the SDAccel environment and run a simple check example to confirm everything is properly running.
 
