@@ -8,7 +8,6 @@ This step will show you how to:
 - Start an AWS F1 instance
 - Configure the SDAccel environment on AWS F1
 - Download SDAccel examples from Github
-- Test your environment
 
 You will need the following:
 - A Xilinx account - create one [here](https://www.xilinx.com/registration/create-account.html)
