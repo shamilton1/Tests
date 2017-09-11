@@ -6,8 +6,8 @@ This getting started guide is intended for hardware designers looking to create 
 ## 1. Setup and testing your environment on AWS F1
 This step will show you how to:
 - Start an AWS F1 instance
-- Configure the SDAccel environment on AWS F1
 - Download SDAccel examples from Github
+- Configure and test your SDAccel environment on AWS F1
 
 You will need the following:
 - A Xilinx account - create one [here](https://www.xilinx.com/registration/create-account.html)
