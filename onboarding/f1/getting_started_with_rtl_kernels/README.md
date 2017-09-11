@@ -3,7 +3,7 @@
 This getting started guide is intended for hardware designers looking to create AWS F1 applications leveraging new or existing RTL code.
 <br><br>
 
-## 1. Setup and testing your environment
+## 1. Setup and testing your environment on AWS F1
 This step will show you how to:
 - Start an AWS F1 instance
 - Load the SDAccel environment on AWS F1
