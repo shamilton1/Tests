@@ -1,6 +1,6 @@
 # 1. Setup and testing your environment on AWS F1
 
-In this step you will learn how to login to AWS, start an F1 instance, source the SDAccel environment and run a simple check example to confirm everything is properly running.
+In this step you will learn how to login to AWS, start an F1 instance, configure the SDAccel environment and run a simple example to confirm everything is properly running.
 
 ## Start an AWS F1 instance
 Follow the [instructions outlined in this video](https://www.xilinx.com/video/software/introduction-to-amazon-ec2-f1.html) to start an AWS F1 instance loaded with the [FPGA Developer AMI](https://aws.amazon.com/marketplace/pp/B06VVYBLZZ)
