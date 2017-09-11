@@ -14,7 +14,7 @@ You will need the following:
 - A Github account - create one [here](https://github.com/join)
 - An Amazon Web Services (AWS) account - create one [here](https://aws.amazon.com/)
 
-[**DETAILS**][1]
+[**FOLLOW THE STEPS**][1]
 
 <br>
 
@@ -23,7 +23,7 @@ This step will show you how to:
 - Package an existing RTL design as an SDAccel acceleration kernel
 - Compile, execute and profile a simple example accelerated with the RTL kernel
 
-[**DETAILS**][2]
+[**FOLLOW THE STEPS**][2]
 
 <br>
 
@@ -34,7 +34,7 @@ This step will take you through an introductory online training course covering:
 - Packaging existing RTL IP for AWS F1
 - Running a host-side application with an RTL kernel
 
-[**DETAILS**][3]
+[**FOLLOW THE STEPS**][3]
 
 <br>
 
@@ -44,7 +44,7 @@ This step will show you how to:
 - Learn more about SDAccel
 - Get support and troubleshoot issues
 
-[**DETAILS**][4]
+[**FOLLOW THE STEPS**][4]
 
 <br>
 
@@ -63,7 +63,7 @@ You will need the following:
   - CentOS 6.8, CentOS 7.3 (64-bit)
   - Ubuntu Linux 16.04.1 LTS (64-bit)
 
-[**DETAILS**][5]
+[**FOLLOW THE STEPS**][5]
 
 [1]: 1_Setup_and_test_your_environment_on_AWS_F1.md
 [2]: 2_Run_your_first_SDAccel_program_on_AWS_F1.md
