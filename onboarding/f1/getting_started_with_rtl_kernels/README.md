@@ -65,7 +65,7 @@ You will need the following:
 
 [**DETAILS**][5]
 
-[1]: 1_Setup_and_test_your_environment_on_aws_f1.md
+[1]: 1_Setup_and_test_your_environment_on_AWS_f1.md
 [2]: 2_Run_your_first_SDAccel_program_on_AWS_F1.md
 [3]: 3_Develop_your_SDAccel_knowledge.md
 [4]: 4_Practice_and_Experiment.md
