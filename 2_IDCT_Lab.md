@@ -50,7 +50,9 @@ This example assumes:
     ```
     sdx
     ```
-    The **Eclipse Launcher** will start up first, showing the workspace directory menu. This allows you to select the location of your workspace (and projects). For this example, create a workspace in your root directory or next to your idct directory by selecting: **Browse… -&gt; Create Folder -&gt; name it “workspace” &lt;Enter&gt; -&gt; OK**. The Workspace path should read &lt;home&gt;/workspace.
+    The **Eclipse Launcher** will start up first, showing the workspace directory menu. This allows you to select the location of your workspace (and projects). For this example, create a workspace in your root directory or next to your idct directory by selecting: **Browse… -&gt; Create Folder -&gt; name it “workspace” &lt;Enter&gt; -&gt; OK**. 
+    
+    The Workspace path should read &lt;home&gt;/workspace.
     
    **OK** this selection.  
 ![](./figures/Welcome.PNG)
