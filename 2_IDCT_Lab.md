@@ -44,7 +44,7 @@ This example assumes:
     source sdaccel_setup.sh
     source $XILINX_SDX/settings64.sh 
     ```
-    The setup might create some warning messages regarding missing libraries but these can be safely ignored.
+    Warning messages regarding missing libraries can be safely ignored.
 
 1. Launch SDx with the sdx command. 
     ```
