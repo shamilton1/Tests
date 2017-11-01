@@ -3,7 +3,7 @@
 
 ## Contents
 1. [Introduction](#Introduction)
-1. [Prerequisite](#Prerequisite)
+1. [Prerequisites](#Prerequisites)
 1. [Setup](#Setup)
 1. [Run Emulations](#Emulation)
 1. [Analyzing the Reports](#Analyzing)
@@ -14,13 +14,13 @@
 
 <a name="Introduction"></a>
 ## Introduction  
-The following tutorial is to help teach the basics of the SDx IDE as well as the SDAccel development process by going through creating a project, running software and hardware emulation, and analyzing various reports generated from the emulations in order to help identify how to optimize code. At the conclusion of the tutorial, there are various links to different resources to help provide details on aspects of optimizing kernel code for projects.
+This tutorial is designed to help teach the basics of the SDx IDE as well as the SDAccel development process. Areas covered include creating a project, running software and hardware emulation, and emulation report analysis to help identify how to optimize code. Additionally, at the end of the tutorial, various links are provided to resources which provide details on various aspects of optimizing kernel code for projects.
 
-The design is a Inverse Discrete Cosine Transform, which is used heavily in audio/image processing and is based off of the Fourier Transform. Please refer to the Wikipedia article  [Descrete Cosine Transform](https://en.wikipedia.org/wiki/Discrete_cosine_transform) for more information. 
+The design is a Inverse Discrete Cosine Transform (IDCT), which is used heavily in audio/image processing and is based on the Fourier Transform. Refer to the Wikipedia article  [Descrete Cosine Transform](https://en.wikipedia.org/wiki/Discrete_cosine_transform) for more information. 
 
  
-<a name="Prerequisite"></a>
-## Prerequisite 
+<a name="Prerequisites"></a>
+## Prerequisites 
 This example assumes that the aws-fpga git is cloned into directory ~/aws-fpga and the actual design files krnl_idct.cpp and idct.cpp is present in ~/idct/src/. If any of these directories are different in your setup, please replace any reference in the tutorial to point to your installation directories. 
 
 In addition, the user should have logged into his/her AWS-F1 instance and bring up graphical desktop environment. The following steps assumes as a starting point an active terminal on the graphical desktop running the default “bash”-shell
