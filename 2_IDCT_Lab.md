@@ -16,7 +16,7 @@
 ## Introduction  
 This tutorial is designed to help teach the basics of the SDx IDE as well as the SDAccel development process. Areas covered include creating a project, running software and hardware emulation, and emulation report analysis to help identify how to optimize code. Additionally, at the end of the tutorial, various links are provided to resources which provide details on various aspects of optimizing kernel code for projects.
 
-The design is a Inverse Discrete Cosine Transform (IDCT), which is used heavily in audio/image processing and is based on the Fourier Transform. Refer to the Wikipedia article  [Descrete Cosine Transform](https://en.wikipedia.org/wiki/Discrete_cosine_transform) for more information. 
+The design is a Inverse Discrete Cosine Transform (IDCT), which is used heavily in audio/image processing and is based on the Fourier Transform. Refer to the Wikipedia article  [Discrete Cosine Transform](https://en.wikipedia.org/wiki/Discrete_cosine_transform) for more information. 
 
  
 <a name="Prerequisites"></a>
