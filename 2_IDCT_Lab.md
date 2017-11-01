@@ -21,7 +21,9 @@ The design is a Inverse Discrete Cosine Transform (IDCT), which is used heavily 
  
 <a name="Prerequisites"></a>
 ## Prerequisites 
-This example assumes that the aws-fpga git is cloned into directory ~/aws-fpga and the actual design files krnl_idct.cpp and idct.cpp is present in ~/idct/src/. If any of these directories are different in your setup, please replace any reference in the tutorial to point to your installation directories. 
+This example assumes: 
+
+   The aws-fpga git is cloned into directory ~/aws-fpga and the actual design files krnl_idct.cpp and idct.cpp is present in ~/idct/src/. If any of these directories are different in your setup, please replace any reference in the tutorial to point to your installation directories. 
 
 In addition, the user should have logged into his/her AWS-F1 instance and bring up graphical desktop environment. The following steps assumes as a starting point an active terminal on the graphical desktop running the default “bash”-shell
 
