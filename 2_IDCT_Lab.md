@@ -29,7 +29,7 @@ This example assumes:
    
    If any of these directories are different in your setup, please replace any reference in the tutorial to point to your installation directories. 
 
-In addition, the user should have logged into his/her AWS-F1 instance and bring up graphical desktop environment. The following steps assumes as a starting point an active terminal on the graphical desktop running the default “bash”-shell
+* You are logged into your AWS-F1 instance and viewing the graphical desktop environment. The following steps assumes as a starting point an active terminal on the graphical desktop running the default “bash”-shell
 
 1. Before the SDAccel tool suite can be started the environment needs to be configured. Towards this end, change into the ~/aws-fpga directory and source “sdaccel_setup.sh” <br>
     ```
