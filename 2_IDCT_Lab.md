@@ -63,7 +63,7 @@ This example assumes:
    Click **OK** again in the Hardware Platform Repositories form.  
 ![](./figures/Platform.PNG)
  
-1. Now the initial setup for an AWS-F1 project is completed. Next we can create a new project through the **Create SDx Project** button on the Welcome screen.  
+1. The initial setup for an AWS-F1 project is now complete. Create a new project by clicking the **Create SDx Project** button on the Welcome screen.
  
 1. In the **Project name** field of the **New Project** window type **IDCT**, and click **Next**.  
 ![](./figures/Project.PNG)
