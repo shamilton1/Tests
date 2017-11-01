@@ -57,8 +57,8 @@ This example assumes:
    **OK** this selection.  
 ![](./figures/Welcome.PNG)
 
-1. The SDx Welcome screen should now be visible. The next step is to have the Amazon F1 Platform recognized by the project. This requires the addition of a custom platform. On the Welcome screen select 
-**Add Custom Platform -&gt; Add CustomPlatform… -&gt;** navigate to **~/aws-fpga/SDAccel/aws_platform/Xilinx_aws-vu9p-f1_4ddr-xpr2pr_4_0 -&gt; OK**. Press **OK** again in the Hardware Platform Repositories form.  
+1. The SDx Welcome screen should now be visible. The next step is to have the Amazon F1 Platform recognized by the project. This requires the addition of a custom platform. On the Welcome screen select
+**Add Custom Platform -&gt; Add CustomPlatform… -&gt;** navigate to **~/aws-fpga/SDAccel/aws_platform/Xilinx_aws-vu9p-f1_4ddr-xpr2pr_4_0 -&gt; OK**. Click **OK** again in the Hardware Platform Repositories form.  
 ![](./figures/Platform.PNG)
  
 1. Now the initial setup for an AWS-F1 project is completed. Next we can create a new project through the **Create SDx Project** button on the Welcome screen.  
