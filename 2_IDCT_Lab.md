@@ -20,8 +20,10 @@ The design is a Inverse Discrete Cosine Transform (IDCT), which is used heavily 
 
  
 <a name="Prerequisites"></a>
-## Prerequisites 
-   ### General
+## Prerequisites
+
+### General
+   
 This example assumes: 
 
 * The aws-fpga git is cloned into directory ~/aws-fpga
@@ -32,7 +34,7 @@ This example assumes:
 
 * You are logged into your AWS-F1 instance and viewing the graphical desktop environment. The following steps assumes as a starting point an active terminal on the graphical desktop running the default “bash”-shell
 
-   ### Environment Configuration
+### Environment Configuration
 
    Before the SDAccel tool suite can be started, the environment needs to be configured. Follow these steps:
 
