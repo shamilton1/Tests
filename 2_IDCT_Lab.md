@@ -86,7 +86,7 @@ This example assumes:
 ![](./figures/SDxWindows.PNG)
  
 <a name="Project Setup"></a>
-## Setup the Project
+## Project Setup
 
 In this section, we are going to setup SDAccel. More precisely, we will show how to import source files from the local file system to the project, determine hardware functions, and generally configure the SDAccel flow. 
 
