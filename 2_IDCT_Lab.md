@@ -68,14 +68,14 @@ This example assumes:
 1. In the **Project name** field of the **New Project** window type **IDCT**, then click **Next**.  
 ![](./figures/Project.PNG)
 
-1. In the **Choose Hardware Platform**, window select the **AWS-VU9P (4ddr-xpr-2pr) (custom)** platform. click **Next**.
+1. In the **Choose Hardware Platform** window, select the **AWS-VU9P (4ddr-xpr-2pr) (custom)** platform. Click **Next**.
 
-1. The **Software Platform** window displays only **Linux on x86** and **OpenCL** as valid options, click **Next**. 
+1. The **Software Platform** window displays only **Linux on x86** and **OpenCL** as valid options. Click **Next**. 
 
 1. The **Templates** window shows all the downloaded Github examples. However, in this tutorial we will are not starting with any of the installed templates, but select **Empty Application** and click **Finish**.  
 ![](./figures/Template.PNG)
 
-1. We have now successfully created a new SDAccel project called IDCT for the AWS-VU9P-F1 platform. This is prominently displayed in the SDx Project Settings window in the center of the GUI. Let us briefly tour the sections of the default GUI layout in more detail:
+1. We have now successfully created a new SDAccel project called IDCT for the AWS-VU9P-F1 platform. This is prominently displayed in the SDx Project Settings window in the center of the GUI. Following is a brief description of the different sections of the default GUI:
     * The main menu bar is located on the top. This menu bar allows direct access to all general project setup and GUI window management tasks. As most tasks are performed through the different setup windows, the main menu is mostly used to recover from accidently closed windows or to access the tool help.
     * Just below the main menu bar is the SDAccel Tool Bar located.  This toolbar provides access to the most common tasks in a project. From right to left these are File Management functions (new, save, save all), Configuration Management, Build, Build All, start Debug, and Run. Most buttons have a default behavior as well as pulldowns.
     * The Project Explorer is the top window on the left hand side. The explorer window is designed to manage and navigate through project files. 
