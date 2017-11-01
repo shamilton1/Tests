@@ -33,7 +33,7 @@ This example assumes:
 
    ### Environment Configuration
 
-   Before the SDAccel tool suite can be started the environment needs to be configured. Follow these steps:
+   Before the SDAccel tool suite can be started, the environment needs to be configured. Follow these steps:
 
 1.  Change into the ~/aws-fpga directory and source “sdaccel_setup.sh” <br>
     ```
