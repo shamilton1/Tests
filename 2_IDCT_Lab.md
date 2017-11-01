@@ -50,7 +50,9 @@ This example assumes:
     ```
     sdx
     ```
-    The **Eclipse Launcher** will start up first, showing the workspace directory menu. This allows you to select the location of your workspace (and projects). For this example, create a workspace in your root directory or next to your idct directory by selecting: **Browse… -&gt; Create Folder -&gt; name it “workspace” &lt;Enter&gt; -&gt; OK**. The Workspace path should read &lt;home&gt;/workspace. **OK** this selection.  
+    The **Eclipse Launcher** will start up first, showing the workspace directory menu. This allows you to select the location of your workspace (and projects). For this example, create a workspace in your root directory or next to your idct directory by selecting: **Browse… -&gt; Create Folder -&gt; name it “workspace” &lt;Enter&gt; -&gt; OK**. The Workspace path should read &lt;home&gt;/workspace.
+    
+**OK** this selection.  
 ![](./figures/Welcome.PNG)
 
 1. The SDx Welcome screen should be visible. Next we will need to get the Amazon F1 Platform recognized by the project. This requires the addition of a custom platform. On the Welcome screen: Select **Add Custom Platform -&gt; Add CustomPlatform… -&gt;** navigate to **~/aws-fpga/SDAccel/aws_platform/Xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0 -&gt; OK**.
