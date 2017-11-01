@@ -65,12 +65,12 @@ This example assumes:
  
 1. The initial setup for an AWS-F1 project is now complete. Create a new project by clicking the **Create SDx Project** button on the Welcome screen.
  
-1. In the **Project name** field of the **New Project** window type **IDCT**, and click **Next**.  
+1. In the **Project name** field of the **New Project** window type **IDCT**, then click **Next**.  
 ![](./figures/Project.PNG)
 
-1. In the **Choose Hardware Platform* window select the **AWS-VU9P (4ddr-xpr-2pr) (custom)** platform. Press **Next**.
+1. In the **Choose Hardware Platform**, window select the **AWS-VU9P (4ddr-xpr-2pr) (custom)** platform. click **Next**.
 
-1. The **Software Platform** window only has **Linux on x86** and **OpenCL** as valid options, click **Next**. 
+1. The **Software Platform** window displays only **Linux on x86** and **OpenCL** as valid options, click **Next**. 
 
 1. The **Templates** window shows all the downloaded Github examples. However, in this tutorial we will are not starting with any of the installed templates, but select **Empty Application** and click **Finish**.  
 ![](./figures/Template.PNG)
