@@ -4,7 +4,7 @@
 ## Contents
 1. [Introduction](#Introduction)
 1. [Prerequisites](#Prerequisites)
-1. [Setup](#Setup)
+1. [Project Setup](#Project Setup)
 1. [Run Emulations](#Emulation)
 1. [Analyzing the Reports](#Analyzing)
 1. [Optimization](#Optimization)
@@ -85,7 +85,7 @@ This example assumes:
     * The remaining windows along the bottom of the main window, accommodate the various consoles and terminals which contain the output of the individual SDAccel executables. A typical examples are compilation errors or the tool output when running.  
 ![](./figures/SDxWindows.PNG)
  
-<a name="Setup"></a>
+<a name="Project Setup"></a>
 ## Setup the Project
 
 In this section, we are going to setup SDAccel. More precisely, we will show how to import source files from the local file system to the project, determine hardware functions, and generally configure the SDAccel flow. 
