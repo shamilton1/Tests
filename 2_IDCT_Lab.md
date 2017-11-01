@@ -21,6 +21,7 @@ The design is a Inverse Discrete Cosine Transform (IDCT), which is used heavily 
  
 <a name="Prerequisites"></a>
 ## Prerequisites 
+   ### General
 This example assumes: 
 
 * The aws-fpga git is cloned into directory ~/aws-fpga
